@@ -41,7 +41,7 @@ export default function Hero() {
           </h1>
 
           {/* Simplified Subheading */}
-          <p className="text-lg sm:text-xl text-black/95 mb-12 max-w-3xl mx-auto leading-relaxed drop-shadow-lg">
+          <p className="text-lg sm:text-xl text-white mb-12 max-w-3xl mx-auto leading-relaxed drop-shadow-lg font-medium">
             Get actionable insights for your farm with drone technology and
             AI-powered crop monitoring. Increase yields while reducing costs.
           </p>

@@ -101,7 +101,7 @@ export default function AboutPage() {
                 <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
                   Our Story
                 </h2>
-                <div className="space-y-4 text-gray-600 leading-relaxed">
+                <div className="space-y-4 text-gray-700 leading-relaxed font-medium">
                   <p>
                     Founded in 2023, Talazo Agritech emerged from a simple
                     observation: Zimbabwean farmers needed better tools to
@@ -130,7 +130,7 @@ export default function AboutPage() {
                   <div className="text-center">
                     <TrendingUp className="w-24 h-24 text-green-600 mx-auto mb-4" />
                     <p className="text-2xl font-bold text-gray-900">500+</p>
-                    <p className="text-gray-600">Farms Monitored</p>
+                    <p className="text-gray-700 font-medium">Farms Monitored</p>
                   </div>
                 </div>
               </div>
@@ -145,7 +145,7 @@ export default function AboutPage() {
               <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
                 Our Values
               </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              <p className="text-xl text-gray-700 max-w-3xl mx-auto font-medium">
                 These core principles guide everything we do and shape how we
                 serve the farming community.
               </p>
@@ -163,7 +163,7 @@ export default function AboutPage() {
                   <h3 className="text-xl font-semibold text-gray-900 mb-3">
                     {value.title}
                   </h3>
-                  <p className="text-gray-600 leading-relaxed">
+                  <p className="text-gray-700 leading-relaxed font-medium">
                     {value.description}
                   </p>
                 </div>
@@ -179,7 +179,7 @@ export default function AboutPage() {
               <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
                 Meet Our Team
               </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              <p className="text-xl text-gray-700 max-w-3xl mx-auto font-medium">
                 A passionate group of agricultural experts, engineers, and
                 innovators dedicated to transforming farming in Zimbabwe.
               </p>
@@ -202,7 +202,7 @@ export default function AboutPage() {
                   <p className="text-green-600 font-medium mb-3">
                     {member.role}
                   </p>
-                  <p className="text-gray-600 leading-relaxed">{member.bio}</p>
+                  <p className="text-gray-700 leading-relaxed font-medium">{member.bio}</p>
                 </div>
               ))}
             </div>

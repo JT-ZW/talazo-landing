@@ -35,7 +35,7 @@ export default function Solution() {
             <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-6">
               Our Solution
             </h2>
-            <p className="text-lg text-slate-600 mb-8 leading-relaxed">
+            <p className="text-lg text-slate-700 mb-8 leading-relaxed font-medium">
               Advanced technology made simple for Zimbabwean farmers. Our
               integrated platform combines drone technology, AI analysis, and
               mobile accessibility to transform how you manage your farm.
@@ -43,19 +43,19 @@ export default function Solution() {
             <div className="grid grid-cols-2 gap-4 text-sm">
               <div className="flex items-center gap-2">
                 <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-                <span className="text-slate-600">Real-time monitoring</span>
+                <span className="text-slate-700 font-medium">Real-time monitoring</span>
               </div>
               <div className="flex items-center gap-2">
                 <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-                <span className="text-slate-600">Early detection</span>
+                <span className="text-slate-700 font-medium">Early detection</span>
               </div>
               <div className="flex items-center gap-2">
                 <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-                <span className="text-slate-600">Local language support</span>
+                <span className="text-slate-700 font-medium">Local language support</span>
               </div>
               <div className="flex items-center gap-2">
                 <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-                <span className="text-slate-600">Affordable pricing</span>
+                <span className="text-slate-700 font-medium">Affordable pricing</span>
               </div>
             </div>
           </div>
@@ -89,7 +89,7 @@ export default function Solution() {
                 <h3 className="text-xl font-semibold text-slate-900 mb-4">
                   {solution.title}
                 </h3>
-                <p className="text-slate-600 leading-relaxed">
+                <p className="text-slate-700 leading-relaxed font-medium">
                   {solution.description}
                 </p>
               </div>
