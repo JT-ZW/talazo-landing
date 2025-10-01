@@ -34,11 +34,12 @@ yarn-error.log*
 .env*
 
 # Custom: Exclude user-uploaded images but keep directory structure
-/public/images/**/*.jpg
-/public/images/**/*.jpeg
-/public/images/**/*.png
-/public/images/**/*.gif
-/public/images/**/*.webp
+# Temporarily allow sample images for deployment
+# /public/images/**/*.jpg
+# /public/images/**/*.jpeg
+# /public/images/**/*.png
+# /public/images/**/*.gif
+# /public/images/**/*.webp
 # Keep .gitkeep files to maintain directory structure
 !/public/images/**/.gitkeep
 
