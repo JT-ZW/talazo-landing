@@ -33,6 +33,15 @@ yarn-error.log*
 # env files (can opt-in for committing if needed)
 .env*
 
+# Custom: Exclude user-uploaded images but keep directory structure
+/public/images/**/*.jpg
+/public/images/**/*.jpeg
+/public/images/**/*.png
+/public/images/**/*.gif
+/public/images/**/*.webp
+# Keep .gitkeep files to maintain directory structure
+!/public/images/**/.gitkeep
+
 # vercel
 .vercel
 
