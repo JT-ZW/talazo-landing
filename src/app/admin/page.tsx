@@ -56,16 +56,18 @@ export default function AdminPage() {
       setError(null);
 
       console.log("Fetching bookings from API...");
-      const response = await fetch('/api/admin/bookings');
-      
+      const response = await fetch("/api/admin/bookings");
+
       if (!response.ok) {
         const errorData = await response.json();
-        throw new Error(errorData.error || `HTTP error! status: ${response.status}`);
+        throw new Error(
+          errorData.error || `HTTP error! status: ${response.status}`
+        );
       }
-      
+
       const data = await response.json();
       console.log("API Response:", data);
-      
+
       if (data.success && data.bookings) {
         setBookings(data.bookings);
         console.log("Successfully loaded", data.bookings.length, "bookings");
@@ -113,11 +115,11 @@ export default function AdminPage() {
   ) => {
     try {
       console.log(`Updating booking ${id} to status: ${newStatus}`);
-      
-      const response = await fetch('/api/admin/bookings', {
-        method: 'PATCH',
+
+      const response = await fetch("/api/admin/bookings", {
+        method: "PATCH",
         headers: {
-          'Content-Type': 'application/json',
+          "Content-Type": "application/json",
         },
         body: JSON.stringify({
           id,
@@ -127,11 +129,13 @@ export default function AdminPage() {
 
       if (!response.ok) {
         const errorData = await response.json();
-        throw new Error(errorData.error || `HTTP error! status: ${response.status}`);
+        throw new Error(
+          errorData.error || `HTTP error! status: ${response.status}`
+        );
       }
 
       const data = await response.json();
-      
+
       if (data.success) {
         // Update local state
         setBookings((prev) =>
@@ -145,7 +149,9 @@ export default function AdminPage() {
               : booking
           )
         );
-        console.log(`Successfully updated booking ${id} to status: ${newStatus}`);
+        console.log(
+          `Successfully updated booking ${id} to status: ${newStatus}`
+        );
       } else {
         throw new Error(data.error || "Failed to update booking");
       }
@@ -223,7 +229,10 @@ export default function AdminPage() {
                     Talazo Admin Dashboard
                   </h1>
                 </div>
-                <p className="text-slate-600">Manage farm assessment bookings and track agricultural insights</p>
+                <p className="text-slate-600">
+                  Manage farm assessment bookings and track agricultural
+                  insights
+                </p>
               </div>
               <button
                 onClick={fetchBookings}
@@ -259,14 +268,16 @@ export default function AdminPage() {
                 <Users className="w-6 h-6 text-white" />
               </div>
               <div className="ml-4">
-                <p className="text-sm text-slate-600 font-medium">Total Bookings</p>
+                <p className="text-sm text-slate-600 font-medium">
+                  Total Bookings
+                </p>
                 <p className="text-2xl font-bold text-slate-900">
                   {stats.total}
                 </p>
               </div>
             </div>
           </div>
-          
+
           <div className="bg-white/70 backdrop-blur-sm p-6 rounded-xl shadow-lg border border-yellow-100 hover:shadow-xl transition-all duration-300">
             <div className="flex items-center">
               <div className="w-12 h-12 bg-gradient-to-br from-yellow-500 to-yellow-600 rounded-xl flex items-center justify-center">
@@ -280,7 +291,7 @@ export default function AdminPage() {
               </div>
             </div>
           </div>
-          
+
           <div className="bg-white/70 backdrop-blur-sm p-6 rounded-xl shadow-lg border border-blue-100 hover:shadow-xl transition-all duration-300">
             <div className="flex items-center">
               <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center">
@@ -294,7 +305,7 @@ export default function AdminPage() {
               </div>
             </div>
           </div>
-          
+
           <div className="bg-white/70 backdrop-blur-sm p-6 rounded-xl shadow-lg border border-green-100 hover:shadow-xl transition-all duration-300">
             <div className="flex items-center">
               <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-green-600 rounded-xl flex items-center justify-center">
@@ -308,7 +319,7 @@ export default function AdminPage() {
               </div>
             </div>
           </div>
-          
+
           <div className="bg-white/70 backdrop-blur-sm p-6 rounded-xl shadow-lg border border-red-100 hover:shadow-xl transition-all duration-300">
             <div className="flex items-center">
               <div className="w-12 h-12 bg-gradient-to-br from-red-500 to-red-600 rounded-xl flex items-center justify-center">

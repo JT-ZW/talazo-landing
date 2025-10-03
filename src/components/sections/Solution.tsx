@@ -43,19 +43,27 @@ export default function Solution() {
             <div className="grid grid-cols-2 gap-4 text-sm">
               <div className="flex items-center gap-2">
                 <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-                <span className="text-slate-700 font-medium">Real-time monitoring</span>
+                <span className="text-slate-700 font-medium">
+                  Real-time monitoring
+                </span>
               </div>
               <div className="flex items-center gap-2">
                 <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-                <span className="text-slate-700 font-medium">Early detection</span>
+                <span className="text-slate-700 font-medium">
+                  Early detection
+                </span>
               </div>
               <div className="flex items-center gap-2">
                 <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-                <span className="text-slate-700 font-medium">Local language support</span>
+                <span className="text-slate-700 font-medium">
+                  Local language support
+                </span>
               </div>
               <div className="flex items-center gap-2">
                 <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-                <span className="text-slate-700 font-medium">Affordable pricing</span>
+                <span className="text-slate-700 font-medium">
+                  Affordable pricing
+                </span>
               </div>
             </div>
           </div>

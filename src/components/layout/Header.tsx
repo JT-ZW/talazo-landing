@@ -75,12 +75,12 @@ export default function Header() {
               ))}
             </nav>
 
-            {/* Make a Booking CTA Button */}
+            {/* Join Waitlist CTA Button */}
             <Link
               href="/booking"
               className="inline-flex items-center gap-2 bg-white hover:bg-green-50 text-green-700 hover:text-green-800 px-6 py-3 rounded-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 group whitespace-nowrap border-2 border-green-600 hover:border-green-700"
             >
-              <span className="font-medium">Make a Booking</span>
+              <span className="font-medium">Join Waitlist</span>
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-200" />
             </Link>
           </div>
@@ -128,7 +128,7 @@ export default function Header() {
                 </Link>
               ))}
 
-              {/* Mobile Booking CTA */}
+              {/* Mobile Waitlist CTA */}
               <Link
                 href="/booking"
                 className="inline-flex items-center justify-center gap-2 bg-white hover:bg-green-50 text-green-700 hover:text-green-800 font-semibold px-4 py-3 rounded-xl shadow-lg mt-2 group whitespace-nowrap border-2 border-green-600"
@@ -137,7 +137,7 @@ export default function Header() {
                   setIsMenuOpen(false);
                 }}
               >
-                <span className="font-medium">Make a Booking</span>
+                <span className="font-medium">Join Waitlist</span>
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-200" />
               </Link>
             </nav>

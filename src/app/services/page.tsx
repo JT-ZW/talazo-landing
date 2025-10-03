@@ -206,8 +206,8 @@ export default function ServicesPage() {
                 Service Plans
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Choose the plan that best fits your farm&apos;s size and
-                monitoring needs.
+                Flexible, custom pricing tailored to your farm&apos;s size and
+                specific needs.
               </p>
             </div>
 
@@ -229,20 +229,20 @@ export default function ServicesPage() {
                     >
                       {plan.name}
                     </h3>
-                    <div className="flex items-center justify-center mb-4">
+                    <div className="flex flex-col items-center justify-center mb-4">
                       <span
-                        className={`text-4xl font-bold ${
+                        className={`text-3xl font-bold ${
                           index === 1 ? "text-white" : "text-gray-900"
                         }`}
                       >
-                        ${plan.price}
+                        Custom Pricing
                       </span>
                       <span
-                        className={`text-sm ml-2 ${
+                        className={`text-sm mt-2 ${
                           index === 1 ? "text-blue-100" : "text-gray-500"
                         }`}
                       >
-                        /{plan.frequency}
+                        Based on farm size & needs
                       </span>
                     </div>
                   </div>

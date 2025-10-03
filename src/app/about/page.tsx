@@ -103,34 +103,65 @@ export default function AboutPage() {
                 </h2>
                 <div className="space-y-4 text-gray-700 leading-relaxed font-medium">
                   <p>
-                    Founded in 2023, Talazo Agritech emerged from a simple
-                    observation: Zimbabwean farmers needed better tools to
-                    monitor their crops and make informed decisions. Traditional
-                    farming methods, while time-tested, often lack the precision
-                    needed to optimize yields in today&apos;s challenging
-                    climate.
+                    The story of Talazo Agritech begins in Sadziwa Village,
+                    Manicaland, where a devastating pest outbreak in 2023
+                    threatened to destroy the season&apos;s harvest. Local
+                    farmers watched helplessly as their crops succumbed to
+                    infestations that could have been caught earlier—if only
+                    they had the right tools to monitor their fields.
                   </p>
                   <p>
-                    Our founders, combining expertise in agricultural
-                    engineering, software development, and local farming
-                    knowledge, set out to create affordable, accessible
-                    technology solutions that could make a real difference in
-                    farmers&apos; lives.
+                    Alex Mwondoka and Jeffrey Murungweni, two computer science
+                    students visiting family in the area, witnessed this crisis
+                    firsthand. They saw how traditional farming methods, while
+                    valuable, couldn&apos;t compete with the precision needed to
+                    detect problems before they spiraled out of control. In
+                    those conversations with frustrated farmers, a vision was
+                    born.
                   </p>
                   <p>
-                    Today, we serve farmers across Zimbabwe, from small-scale
-                    vegetable growers to large commercial operations, helping
-                    them increase yields by up to 30% while reducing input costs
-                    by 25%.
+                    &quot;We realized we had the technical skills to change
+                    this,&quot; recalls Alex. &quot;We weren&apos;t going to
+                    accept the status quo when technology could make such a
+                    difference.&quot; They set out to build a solution that
+                    would put cutting-edge agricultural intelligence into the
+                    hands of every Zimbabwean farmer—regardless of farm size or
+                    resources.
+                  </p>
+                  <p>
+                    But their ambition extended far beyond one village. They
+                    envisioned a software-first approach that could scale across
+                    borders, integrate with various hardware platforms, and
+                    serve the entire Pan-African agricultural community. What
+                    started as a response to a local crisis evolved into a
+                    mission to democratize precision agriculture across the
+                    continent.
+                  </p>
+                  <p>
+                    Today, Talazo Agritech combines drone technology, AI-powered
+                    analytics, and deep agricultural expertise to help farmers
+                    make data-driven decisions. From small-scale vegetable
+                    growers to large commercial operations, we&apos;re proving
+                    that smart technology isn&apos;t just for wealthy
+                    nations—it&apos;s for every farmer who wants to maximize
+                    yields, reduce costs, and build resilient, sustainable
+                    farming practices.
                   </p>
                 </div>
               </div>
               <div className="relative">
-                <div className="aspect-square bg-gradient-to-br from-green-100 to-blue-100 rounded-2xl flex items-center justify-center">
+                <div className="aspect-square bg-gradient-to-br from-green-100 to-blue-100 rounded-2xl flex items-center justify-center p-8">
                   <div className="text-center">
                     <TrendingUp className="w-24 h-24 text-green-600 mx-auto mb-4" />
-                    <p className="text-2xl font-bold text-gray-900">500+</p>
-                    <p className="text-gray-700 font-medium">Farms Monitored</p>
+                    <p className="text-4xl font-bold text-gray-900 mb-2">
+                      From Crisis
+                    </p>
+                    <p className="text-2xl font-bold text-green-600 mb-4">
+                      To Innovation
+                    </p>
+                    <p className="text-gray-700 font-medium text-lg">
+                      Building Pan-African Agricultural Intelligence
+                    </p>
                   </div>
                 </div>
               </div>
@@ -202,7 +233,9 @@ export default function AboutPage() {
                   <p className="text-green-600 font-medium mb-3">
                     {member.role}
                   </p>
-                  <p className="text-gray-700 leading-relaxed font-medium">{member.bio}</p>
+                  <p className="text-gray-700 leading-relaxed font-medium">
+                    {member.bio}
+                  </p>
                 </div>
               ))}
             </div>

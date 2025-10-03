@@ -120,7 +120,9 @@ export default function Footer() {
               <div className="space-y-4 mb-8">
                 <div className="flex items-center gap-3 text-slate-300">
                   <Users className="w-4 h-4 text-green-400" />
-                  <span className="text-sm font-medium">5+ Satisfied Farmers</span>
+                  <span className="text-sm font-medium">
+                    5+ Satisfied Farmers
+                  </span>
                 </div>
                 <div className="flex items-center gap-3 text-slate-300">
                   <Award className="w-4 h-4 text-green-400" />
@@ -317,7 +319,9 @@ export default function Footer() {
                     <p className="text-slate-300 text-sm leading-relaxed">
                       {COMPANY_INFO.address.full}
                     </p>
-                    <p className="text-slate-400 text-xs font-medium">Visit Our Office</p>
+                    <p className="text-slate-400 text-xs font-medium">
+                      Visit Our Office
+                    </p>
                   </div>
                 </div>
               </div>

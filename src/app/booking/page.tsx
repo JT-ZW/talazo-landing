@@ -177,7 +177,7 @@ export default function BookingPage() {
 
       setSubmitStatus("success");
       setSubmitMessage(
-        `Thank you ${firstName}! Your booking request has been submitted successfully. We've sent a confirmation email to ${formData.email}. Our team will contact you within 24-48 hours to confirm your appointment. Booking ID: ${result.bookingId}`
+        `Thank you ${firstName}! You've successfully joined our waitlist. We've sent a confirmation email to ${formData.email}. Our team will contact you within 24-48 hours with your custom pricing quote and to discuss next steps. Waitlist ID: ${result.bookingId}`
       );
       setShowModal(true);
 
@@ -224,7 +224,7 @@ export default function BookingPage() {
               </div>
 
               <h3 className="text-xl font-bold text-gray-900 mb-2">
-                Booking Confirmed! 🎉
+                Welcome to the Waitlist! 🎉
               </h3>
 
               <p className="text-gray-600 mb-6 text-sm leading-relaxed">
@@ -280,16 +280,16 @@ export default function BookingPage() {
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="max-w-4xl mx-auto text-center">
               <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">
-                Book Your
+                Join the Waitlist for
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-600 to-blue-600">
                   {" "}
-                  Farm Assessment
+                  Talazo Services
                 </span>
               </h1>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-                Ready to transform your farming operations? Complete the form
-                below to schedule your personalized consultation and drone
-                survey.
+                Be among the first to experience precision agriculture in
+                Zimbabwe. Complete the form below to join our waitlist and
+                we&apos;ll notify you when we launch in your area.
               </p>
             </div>
           </div>
@@ -489,7 +489,7 @@ export default function BookingPage() {
                   <div className="flex items-center mb-6">
                     <DollarSign className="w-6 h-6 text-green-600 mr-3" />
                     <h2 className="text-2xl font-semibold text-gray-900">
-                      Service Plan
+                      Service Plans
                     </h2>
                   </div>
 
@@ -512,14 +512,14 @@ export default function BookingPage() {
                           }`}
                         >
                           <div className="text-center">
-                            <h3 className="font-semibold text-gray-900 mb-1">
+                            <h3 className="font-semibold text-gray-900 mb-2">
                               {plan.name}
                             </h3>
-                            <p className="text-2xl font-bold text-green-600">
-                              ${plan.price}
+                            <p className="text-lg font-bold text-green-600 mb-1">
+                              Custom Pricing
                             </p>
                             <p className="text-sm text-gray-600">
-                              per {plan.frequency}
+                              Contact for quote
                             </p>
                           </div>
                         </div>
@@ -527,8 +527,18 @@ export default function BookingPage() {
                     ))}
                   </div>
 
+                  <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 mb-6">
+                    <p className="text-sm text-blue-800">
+                      <strong>Custom Pricing:</strong> Our pricing is tailored
+                      to your specific needs, farm size, and service
+                      requirements. After you join the waitlist, we&apos;ll
+                      contact you with a personalized quote based on your farm
+                      details.
+                    </p>
+                  </div>
+
                   <Input
-                    label="Preferred Assessment Date"
+                    label="Preferred Contact Date"
                     name="preferredDate"
                     type="date"
                     value={formData.preferredDate}
@@ -578,7 +588,7 @@ export default function BookingPage() {
                     ) : (
                       <>
                         <Calendar className="w-5 h-5 mr-2" />
-                        Book Assessment
+                        Join Waitlist
                       </>
                     )}
                   </Button>
@@ -602,11 +612,11 @@ export default function BookingPage() {
                     <span className="text-2xl font-bold text-white">1</span>
                   </div>
                   <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                    Confirmation Call
+                    Confirmation & Quote
                   </h3>
                   <p className="text-gray-600">
-                    We&apos;ll call you within 24 hours to confirm your booking
-                    and answer any questions.
+                    We&apos;ll contact you within 24-48 hours with a custom
+                    pricing quote based on your farm details.
                   </p>
                 </div>
 
@@ -615,11 +625,11 @@ export default function BookingPage() {
                     <span className="text-2xl font-bold text-white">2</span>
                   </div>
                   <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                    Site Visit
+                    Launch Notification
                   </h3>
                   <p className="text-gray-600">
-                    Our team visits your farm for consultation and drone survey
-                    on your preferred date.
+                    You&apos;ll be among the first to know when we launch
+                    services in your area.
                   </p>
                 </div>
 
@@ -628,11 +638,11 @@ export default function BookingPage() {
                     <span className="text-2xl font-bold text-white">3</span>
                   </div>
                   <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                    Detailed Report
+                    Priority Access
                   </h3>
                   <p className="text-gray-600">
-                    Receive your comprehensive crop analysis report within 48
-                    hours of the survey.
+                    As a waitlist member, you&apos;ll get priority booking when
+                    we start serving your region.
                   </p>
                 </div>
               </div>

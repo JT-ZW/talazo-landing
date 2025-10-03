@@ -48,8 +48,11 @@ export default function Hero() {
 
           {/* Clean CTA Section */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
-            <Button className="w-full sm:w-auto bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 px-8 py-3 text-white font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 group">
-              <span className="mr-2">Book Your Assessment</span>
+            <Button
+              href="/booking"
+              className="w-full sm:w-auto bg-white text-green-700 hover:bg-green-50 px-8 py-4 font-bold rounded-lg shadow-2xl hover:shadow-3xl transition-all duration-300 group border-2 border-green-500 text-lg"
+            >
+              <span className="mr-2">Join Waitlist</span>
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-200" />
             </Button>
           </div>
