@@ -33,36 +33,43 @@ export default function Solution() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-20">
           <div>
             <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-6">
-              Our Solution
+              Our Product
             </h2>
             <p className="text-lg text-slate-700 mb-8 leading-relaxed font-medium">
-              Advanced technology made simple for Zimbabwean farmers. Our
-              integrated platform combines drone technology, AI analysis, and
-              mobile accessibility to transform how you manage your farm.
+              Our software turns aerial imagery into farmer-friendly insights
+              that make crop monitoring timely and accurate. By identifying
+              pests, diseases, nutrient stress, or water shortages early,
+              farmers can act quickly to protect yields.
+            </p>
+            <p className="text-lg text-slate-700 mb-8 leading-relaxed font-medium">
+              This helps increase productivity, reduce costs, and build
+              resilience against climate risks—empowering both smallholder and
+              commercial farmers with precision insights for better
+              decision-making.
             </p>
             <div className="grid grid-cols-2 gap-4 text-sm">
               <div className="flex items-center gap-2">
                 <div className="w-2 h-2 bg-green-500 rounded-full"></div>
                 <span className="text-slate-700 font-medium">
-                  Real-time monitoring
+                  Early pest detection
                 </span>
               </div>
               <div className="flex items-center gap-2">
                 <div className="w-2 h-2 bg-green-500 rounded-full"></div>
                 <span className="text-slate-700 font-medium">
-                  Early detection
+                  Disease monitoring
                 </span>
               </div>
               <div className="flex items-center gap-2">
                 <div className="w-2 h-2 bg-green-500 rounded-full"></div>
                 <span className="text-slate-700 font-medium">
-                  Local language support
+                  Water stress alerts
                 </span>
               </div>
               <div className="flex items-center gap-2">
                 <div className="w-2 h-2 bg-green-500 rounded-full"></div>
                 <span className="text-slate-700 font-medium">
-                  Affordable pricing
+                  Climate resilience
                 </span>
               </div>
             </div>

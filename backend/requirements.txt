@@ -1,0 +1,66 @@
+# Production Dependencies
+fastapi==0.115.0
+uvicorn[standard]==0.32.0
+pydantic==2.9.2
+pydantic-settings==2.6.0
+
+# Database
+supabase==2.9.1
+asyncpg==0.29.0
+sqlalchemy==2.0.36
+
+# Image Processing & Geospatial
+rasterio==1.4.2
+numpy==2.1.3
+opencv-python==4.10.0.84
+pillow==11.0.0
+gdal==3.10.0
+scikit-image==0.24.0
+
+# OpenDroneMap Integration
+requests==2.32.3
+aiofiles==24.1.0
+
+# Visualization & Mapping
+matplotlib==3.9.2
+plotly==5.24.1
+folium==0.18.0
+
+# Report Generation
+reportlab==4.2.5
+weasyprint==62.3
+jinja2==3.1.4
+
+# Email & Notifications
+resend==2.4.0
+sendgrid==6.11.0
+
+# File Handling & Storage
+boto3==1.35.57
+python-multipart==0.0.12
+
+# Authentication & Security
+python-jose[cryptography]==3.3.0
+passlib[bcrypt]==1.7.4
+python-decouple==3.8
+
+# Background Tasks
+celery==5.4.0
+redis==5.2.0
+
+# Monitoring & Logging
+structlog==24.4.0
+sentry-sdk[fastapi]==2.17.0
+
+# Development Dependencies
+pytest==8.3.3
+pytest-asyncio==0.24.0
+pytest-cov==6.0.0
+httpx==0.27.2
+black==24.10.0
+flake8==7.1.1
+mypy==1.13.0
+
+# Jupyter for Analysis
+jupyter==1.1.1
+ipykernel==6.29.5

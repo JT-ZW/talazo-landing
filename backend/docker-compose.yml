@@ -1,0 +1,108 @@
+version: "3.8"
+
+services:
+  # Talazo Intelligence Backend
+  backend:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      - DEBUG=True
+      - DATABASE_URL=postgresql://postgres:password@db:5432/talazo
+      - REDIS_URL=redis://redis:6379/0
+    volumes:
+      - ./app:/app/app
+      - ./temp_processing:/tmp/talazo_processing
+    depends_on:
+      - db
+      - redis
+    restart: unless-stopped
+    networks:
+      - talazo-network
+
+  # PostgreSQL Database
+  db:
+    image: postgres:15-alpine
+    environment:
+      - POSTGRES_DB=talazo
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=password
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./database_schema.sql:/docker-entrypoint-initdb.d/01-intelligence-schema.sql
+    ports:
+      - "5432:5432"
+    restart: unless-stopped
+    networks:
+      - talazo-network
+
+  # Redis for background tasks
+  redis:
+    image: redis:7-alpine
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    restart: unless-stopped
+    networks:
+      - talazo-network
+
+  # Celery worker for background processing
+  worker:
+    build: .
+    command: celery -A app.main worker --loglevel=info
+    environment:
+      - DEBUG=True
+      - DATABASE_URL=postgresql://postgres:password@db:5432/talazo
+      - REDIS_URL=redis://redis:6379/0
+    volumes:
+      - ./app:/app/app
+      - ./temp_processing:/tmp/talazo_processing
+    depends_on:
+      - db
+      - redis
+    restart: unless-stopped
+    networks:
+      - talazo-network
+
+  # Flower for monitoring Celery tasks (optional)
+  flower:
+    build: .
+    command: celery -A app.main flower --port=5555
+    ports:
+      - "5555:5555"
+    environment:
+      - DEBUG=True
+      - REDIS_URL=redis://redis:6379/0
+    depends_on:
+      - redis
+    restart: unless-stopped
+    networks:
+      - talazo-network
+
+  # pgAdmin for database management (optional, for development)
+  pgadmin:
+    image: dpage/pgadmin4:latest
+    environment:
+      - PGADMIN_DEFAULT_EMAIL=admin@talazo.com
+      - PGADMIN_DEFAULT_PASSWORD=admin
+    ports:
+      - "8080:80"
+    volumes:
+      - pgadmin_data:/var/lib/pgadmin
+    depends_on:
+      - db
+    restart: unless-stopped
+    networks:
+      - talazo-network
+    profiles:
+      - dev # Only start with --profile dev
+
+volumes:
+  postgres_data:
+  redis_data:
+  pgadmin_data:
+
+networks:
+  talazo-network:
+    driver: bridge

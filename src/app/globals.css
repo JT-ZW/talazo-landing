@@ -298,6 +298,36 @@ a:hover {
   }
 }
 
+/* African-inspired Animations */
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes bounce-slow {
+  0%, 100% {
+    transform: translateY(0) rotate(45deg);
+  }
+  50% {
+    transform: translateY(-10px) rotate(45deg);
+  }
+}
+
+@keyframes african-pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.6;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+}
+
 /* ===== ANIMATION UTILITY CLASSES ===== */
 .animate-shimmer {
   animation: shimmer 2s infinite;
@@ -305,6 +335,18 @@ a:hover {
 
 .animate-float {
   animation: float 3s ease-in-out infinite;
+}
+
+.animate-spin-slow {
+  animation: spin-slow 20s linear infinite;
+}
+
+.animate-bounce-slow {
+  animation: bounce-slow 3s ease-in-out infinite;
+}
+
+.animate-african-pulse {
+  animation: african-pulse 2s ease-in-out infinite;
 }
 
 .animate-pulse-glow {

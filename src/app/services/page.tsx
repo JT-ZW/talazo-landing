@@ -1,5 +1,6 @@
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
+import AfricanPattern from "@/components/ui/AfricanPattern";
 import { SERVICE_PRICING } from "@/lib/constants";
 import {
   Drone,
@@ -109,9 +110,9 @@ export default function ServicesPage() {
                 </span>
               </h1>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-                Comprehensive drone-powered agricultural monitoring services
-                designed to maximize your farm&apos;s productivity, reduce
-                costs, and optimize resource usage.
+                Comprehensive drone-powered agricultural monitoring services for
+                smallholder and commercial farmers, designed to maximize
+                productivity, reduce costs, and build climate resilience.
               </p>
             </div>
           </div>
@@ -239,7 +240,7 @@ export default function ServicesPage() {
                       </span>
                       <span
                         className={`text-sm mt-2 ${
-                          index === 1 ? "text-blue-100" : "text-gray-500"
+                          index === 1 ? "text-white/90" : "text-gray-500"
                         }`}
                       >
                         Based on farm size & needs
@@ -257,7 +258,7 @@ export default function ServicesPage() {
                         />
                         <span
                           className={
-                            index === 1 ? "text-blue-100" : "text-gray-600"
+                            index === 1 ? "text-white/95" : "text-gray-600"
                           }
                         >
                           {feature}
@@ -283,12 +284,39 @@ export default function ServicesPage() {
         </section>
 
         {/* Call to Action */}
-        <section className="py-20 bg-gradient-to-r from-green-600 to-blue-600">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
+        <section className="py-20 bg-gradient-to-r from-orange-600 via-green-600 to-blue-600 relative overflow-hidden">
+          {/* African Pattern Overlay */}
+          <div className="absolute inset-0 text-yellow-300">
+            <AfricanPattern variant="mudcloth" opacity={0.12} />
+          </div>
+          
+          {/* Animated Decorative Elements */}
+          <div className="absolute top-10 right-10 w-16 h-16 border-2 border-white/20 rotate-45 animate-bounce-slow" />
+          <div className="absolute bottom-10 left-10 w-20 h-20 border-2 border-white/20 animate-african-pulse">
+            <svg viewBox="0 0 100 100" className="w-full h-full">
+              <polygon points="50,15 90,85 10,85" fill="none" stroke="rgba(255,255,255,0.2)" strokeWidth="2" />
+            </svg>
+          </div>
+          
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+            <h2
+              className="text-3xl sm:text-4xl font-bold mb-6"
+              style={{
+                color: "#000000",
+                textShadow:
+                  "0 0 10px rgba(255,255,255,0.9), 0 0 20px rgba(255,255,255,0.7), 2px 2px 4px rgba(255,255,255,0.8)",
+              }}
+            >
               Ready to Optimize Your Farm?
             </h2>
-            <p className="text-xl text-green-100 mb-8 max-w-2xl mx-auto">
+            <p
+              className="text-xl mb-8 max-w-2xl mx-auto font-bold"
+              style={{
+                color: "#000000",
+                textShadow:
+                  "0 0 10px rgba(255,255,255,0.9), 0 0 20px rgba(255,255,255,0.7), 2px 2px 4px rgba(255,255,255,0.8)",
+              }}
+            >
               Join hundreds of farmers who are already benefiting from our
               advanced monitoring services.
             </p>

@@ -1,33 +1,42 @@
 import Image from "next/image";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
-import { TrendingUp, Globe, Heart, Zap, Shield } from "lucide-react";
+import AfricanPattern from "@/components/ui/AfricanPattern";
+import {
+  TrendingUp,
+  Globe,
+  Heart,
+  Zap,
+  Shield,
+  ArrowRight,
+  Plane,
+} from "lucide-react";
 
 export default function AboutPage() {
   const values = [
     {
       icon: Heart,
-      title: "Farmer-Centric",
+      title: "Inclusivity",
       description:
-        "Every solution we build puts farmers first, addressing real challenges faced in Zimbabwean agriculture.",
+        "Accessible solutions for all farmers, from smallholders to large-scale operations, ensuring everyone can benefit from precision agriculture.",
     },
     {
       icon: Zap,
       title: "Innovation",
       description:
-        "We leverage cutting-edge drone technology and AI to bring precision agriculture to every farm.",
+        "Smart, data-driven agritech that leverages cutting-edge drone technology and AI to deliver timely, actionable insights.",
     },
     {
       icon: Shield,
-      title: "Reliability",
+      title: "Sustainability",
       description:
-        "Farmers depend on us for critical insights. We deliver accurate, timely data you can trust.",
+        "Climate-smart and eco-friendly solutions that help farmers optimize resources, reduce waste, and build resilient farming practices.",
     },
     {
       icon: Globe,
-      title: "Sustainability",
+      title: "Impact",
       description:
-        "Our technology helps farmers optimize resources, reduce waste, and build sustainable farming practices.",
+        "Real results in yields and livelihoods, empowering farmers with technology that makes a tangible difference in their productivity and income.",
     },
   ];
 
@@ -79,11 +88,9 @@ export default function AboutPage() {
                   Technology
                 </span>
               </h1>
-              <p className="text-xl text-white/95 max-w-3xl mx-auto leading-relaxed drop-shadow-lg">
-                At Talazo Agritech, we&apos;re passionate about empowering
-                Zimbabwean farmers with cutting-edge drone technology and
-                AI-driven insights to maximize yields, reduce costs, and build
-                sustainable farming practices.
+              <p className="text-xl text-white/95 max-w-3xl mx-auto leading-relaxed drop-shadow-lg mb-8">
+                Empowering African communities to achieve lasting food security
+                through digital transformation in agriculture.
               </p>
             </div>
           </div>
@@ -91,6 +98,44 @@ export default function AboutPage() {
           {/* Background Elements */}
           <div className="absolute top-10 left-10 w-20 h-20 bg-green-400/20 rounded-full opacity-30 animate-pulse"></div>
           <div className="absolute bottom-10 right-10 w-32 h-32 bg-blue-400/20 rounded-full opacity-20 animate-pulse delay-1000"></div>
+        </section>
+
+        {/* Vision & Mission Section */}
+        <section className="py-20 bg-gradient-to-br from-green-50 to-blue-50">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-5xl mx-auto">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+                {/* Vision */}
+                <div className="bg-white rounded-2xl p-8 shadow-lg border-t-4 border-green-500">
+                  <div className="w-14 h-14 bg-green-100 rounded-full flex items-center justify-center mb-6">
+                    <Globe className="w-7 h-7 text-green-600" />
+                  </div>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                    Our Vision
+                  </h3>
+                  <p className="text-lg text-gray-700 leading-relaxed font-medium">
+                    Empowering African communities to achieve lasting food
+                    security.
+                  </p>
+                </div>
+
+                {/* Mission */}
+                <div className="bg-white rounded-2xl p-8 shadow-lg border-t-4 border-blue-500">
+                  <div className="w-14 h-14 bg-blue-100 rounded-full flex items-center justify-center mb-6">
+                    <TrendingUp className="w-7 h-7 text-blue-600" />
+                  </div>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                    Our Mission
+                  </h3>
+                  <p className="text-lg text-gray-700 leading-relaxed font-medium">
+                    To drive digital transformation in Africa&apos;s
+                    agriculture, boosting productivity sustainably through
+                    inclusive technology.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
         </section>
 
         {/* Our Story Section */}
@@ -242,13 +287,101 @@ export default function AboutPage() {
           </div>
         </section>
 
+        {/* Partners & Ecosystem Section */}
+        <section className="py-20 bg-gray-50">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+                Our Ecosystem
+              </h2>
+              <p className="text-xl text-gray-700 max-w-3xl mx-auto font-medium">
+                We collaborate with trusted partners to deliver comprehensive
+                solutions that empower farmers at every step.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+              <div className="bg-white rounded-xl p-6 text-center shadow-sm">
+                <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Shield className="w-8 h-8 text-blue-600" />
+                </div>
+                <h3 className="font-semibold text-gray-900 mb-2">
+                  Testing Labs
+                </h3>
+                <p className="text-gray-600 text-sm">
+                  Soil and crop analysis for precise recommendations
+                </p>
+              </div>
+
+              <div className="bg-white rounded-xl p-6 text-center shadow-sm">
+                <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <ArrowRight className="w-8 h-8 text-green-600" />
+                </div>
+                <h3 className="font-semibold text-gray-900 mb-2">
+                  Agro-Dealers
+                </h3>
+                <p className="text-gray-600 text-sm">
+                  Input suppliers aligned with our insights
+                </p>
+              </div>
+
+              <div className="bg-white rounded-xl p-6 text-center shadow-sm">
+                <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Plane className="w-8 h-8 text-purple-600" />
+                </div>
+                <h3 className="font-semibold text-gray-900 mb-2">
+                  Drone Services
+                </h3>
+                <p className="text-gray-600 text-sm">
+                  Hardware partners for scalable operations
+                </p>
+              </div>
+
+              <div className="bg-white rounded-xl p-6 text-center shadow-sm">
+                <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Globe className="w-8 h-8 text-orange-600" />
+                </div>
+                <h3 className="font-semibold text-gray-900 mb-2">
+                  Extension Services
+                </h3>
+                <p className="text-gray-600 text-sm">
+                  NGOs and agencies expanding our reach
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Call to Action */}
-        <section className="py-20 bg-gradient-to-r from-green-600 to-blue-600">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
+        <section className="py-20 bg-gradient-to-r from-orange-600 via-green-600 to-blue-600 relative overflow-hidden">
+          {/* African Pattern Overlay */}
+          <div className="absolute inset-0 text-yellow-300">
+            <AfricanPattern variant="tribal" opacity={0.12} />
+          </div>
+          
+          {/* Animated Decorative Elements */}
+          <div className="absolute top-10 left-10 w-16 h-16 border-2 border-white/20 rotate-45 animate-spin-slow" />
+          <div className="absolute bottom-10 right-10 w-20 h-20 border-2 border-white/20 rounded-full animate-african-pulse" />
+          
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+            <h2
+              className="text-3xl sm:text-4xl font-bold mb-6"
+              style={{
+                color: "#000000",
+                textShadow:
+                  "0 0 10px rgba(255,255,255,0.9), 0 0 20px rgba(255,255,255,0.7), 2px 2px 4px rgba(255,255,255,0.8)",
+              }}
+            >
               Ready to Transform Your Farm?
             </h2>
-            <p className="text-xl text-green-100 mb-8 max-w-2xl mx-auto">
+            <p
+              className="text-xl mb-8 max-w-2xl mx-auto font-bold"
+              style={{
+                color: "#000000",
+                textShadow:
+                  "0 0 10px rgba(255,255,255,0.9), 0 0 20px rgba(255,255,255,0.7), 2px 2px 4px rgba(255,255,255,0.8)",
+              }}
+            >
               Join hundreds of farmers who are already using our technology to
               increase yields and reduce costs.
             </p>

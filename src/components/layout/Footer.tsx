@@ -53,13 +53,13 @@ export default function Footer() {
         <div className="py-16 border-b border-slate-700/50">
           <div className="max-w-4xl mx-auto text-center">
             <div className="mb-8">
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-green-500/10 border border-green-500/20 text-green-400 text-sm font-medium mb-6">
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-orange-500/10 border border-orange-500/20 text-orange-400 text-sm font-medium mb-6 animate-african-pulse">
                 <Leaf className="w-4 h-4" />
                 Stay Updated
               </div>
               <h3 className="text-3xl sm:text-4xl font-bold text-white mb-4">
                 Get the Latest in
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-400">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 via-green-400 to-blue-400">
                   {" "}
                   AgriTech
                 </span>

@@ -7,7 +7,7 @@ Follow these steps to deploy your Talazo website to Vercel.
 ✅ GitHub repository created and pushed  
 ✅ Supabase database set up  
 ✅ Resend account configured  
-✅ Environment variables ready  
+✅ Environment variables ready
 
 ## 🔧 Step 1: Connect to Vercel
 
@@ -58,17 +58,20 @@ NEXT_PUBLIC_SITE_URL = https://your-vercel-domain.vercel.app
 ## ✅ Step 6: Test Your Deployment
 
 ### Test the Main Website
+
 - Visit your Vercel URL
 - Check all pages load correctly
 - Verify images display properly
 
 ### Test the Booking System
+
 1. Go to `/booking`
 2. Submit a test booking
 3. Check your admin email for notification
 4. Verify booking appears in Supabase database
 
 ### Test the Admin Dashboard
+
 1. Go to `/admin`
 2. Verify bookings are displayed
 3. Test status updates
@@ -79,20 +82,24 @@ NEXT_PUBLIC_SITE_URL = https://your-vercel-domain.vercel.app
 ### Common Issues:
 
 **Images not loading:**
+
 - Upload your images to the deployed `/public/images/` folders
 - Or use a CDN like Cloudinary
 
 **Emails not sending:**
+
 - Verify Resend API key
 - Check domain verification in Resend
 - Review sender email addresses
 
 **Database connection errors:**
+
 - Verify Supabase environment variables
 - Check database permissions
 - Ensure RLS policies are correct
 
 **404 errors:**
+
 - Check file paths in your code
 - Verify all pages are properly exported
 
@@ -105,6 +112,7 @@ NEXT_PUBLIC_SITE_URL = https://your-vercel-domain.vercel.app
 ## 🔄 Continuous Deployment
 
 Your site will automatically redeploy when you:
+
 1. Push changes to the `main` branch
 2. Vercel will build and deploy automatically
 3. New version goes live in ~2 minutes
