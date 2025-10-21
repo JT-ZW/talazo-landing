@@ -99,6 +99,7 @@ export const NAVIGATION_LINKS = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About Us" },
   { href: "/services", label: "Our Services" },
+  { href: "/demo", label: "Demo" },
   { href: "/contact", label: "Contact Us" },
   { href: "/booking", label: "Make a Booking" },
 ] as const;

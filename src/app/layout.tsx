@@ -164,6 +164,7 @@ export default function RootLayout({
         <meta name="referrer" content="origin-when-cross-origin" />
       </head>
       <body
+        suppressHydrationWarning
         className="
           antialiased 
           font-sans 
