@@ -1,221 +1,59 @@
-# Talazo Agritech Landing Page
+# Talazo Agritech
 
-A modern, responsive landing page for Talazo Agritech's drone-powered crop monitoring services in Zimbabwe. Built with Next.js 15, TypeScript, Tailwind CSS, and Supabase.
+Farmer-focused public website built with Svelte 5, SvelteKit, and the Vercel deployment adapter. All current pages are prerendered.
 
-## 🚀 Features
+## Local development
 
-- **Modern Design**: Clean, responsive design optimized for all devices
-- **Farmer Registration**: Secure form handling with comprehensive validation
-- **Database Integration**: Supabase backend for data storage
-- **Performance Optimized**: Fast loading with Next.js App Router and Turbopack
-- **SEO Friendly**: Built-in SEO optimization and meta tags
-- **Accessibility**: WCAG compliant with proper ARIA labels
-- **Type Safety**: Full TypeScript implementation
-- **Mobile First**: Responsive design with mobile-first approach
-
-## 🛠️ Tech Stack
-
-- **Framework**: Next.js 15.5.4 (App Router with Turbopack)
-- **Language**: TypeScript
-- **Styling**: Tailwind CSS
-- **Database**: Supabase (PostgreSQL)
-- **Validation**: Zod for form validation
-- **Icons**: Lucide React
-- **Deployment**: Optimized for Vercel
-
-## 📦 Project Structure
-
-```
-src/
-├── app/                  # Next.js App Router
-│   ├── globals.css      # Global styles
-│   ├── layout.tsx       # Root layout
-│   ├── page.tsx         # Home page
-│   └── api/             # API routes
-├── components/          # Reusable components
-│   ├── ui/              # UI primitives (Button, Input, etc.)
-│   ├── forms/           # Form components
-│   ├── layout/          # Layout components (Header, Footer)
-│   └── sections/        # Page sections (Hero, Features, etc.)
-├── lib/                 # Utility functions and configurations
-│   ├── constants.ts     # App constants and configurations
-│   ├── supabase.ts      # Supabase client setup
-│   ├── utils.ts         # Utility functions
-│   └── validations.ts   # Zod schemas for validation
-├── types/               # TypeScript type definitions
-│   ├── database.ts      # Database types
-│   └── farmer.ts        # Application types
-└── database/            # Database schema and seeds
-    ├── schema.sql       # Database schema
-    └── seed.sql         # Sample data
+```sh
+npm install
+npm run dev
 ```
 
-## 🚀 Quick Start
+On Windows PowerShell with restricted execution policies, use `npm.cmd` instead of `npm`.
 
-### Prerequisites
+## Verification and production
 
-- Node.js 18.17 or later
-- npm or yarn
-- A Supabase account
-
-### Installation
-
-1. **Clone the repository**
-
-   ```bash
-   git clone <repository-url>
-   cd talazo
-   ```
-
-2. **Install dependencies**
-
-   ```bash
-   npm install
-   ```
-
-3. **Set up environment variables**
-
-   ```bash
-   cp .env.example .env.local
-   ```
-
-   Edit `.env.local` and add your Supabase credentials:
-
-   ```env
-   NEXT_PUBLIC_SUPABASE_URL=your_supabase_project_url
-   NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
-   NEXT_PUBLIC_SITE_URL=http://localhost:3000
-   CONTACT_EMAIL=info@talazo.co.zw
-   ```
-
-4. **Set up the database**
-
-   - Create a new Supabase project at [supabase.com](https://supabase.com)
-   - Go to the SQL Editor in your Supabase dashboard
-   - Run the SQL in `database/schema.sql` to create tables
-   - Optionally run `database/seed.sql` for sample data
-
-5. **Run the development server**
-
-   ```bash
-   npm run dev
-   ```
-
-6. **Open your browser**
-   Navigate to [http://localhost:3000](http://localhost:3000)
-
-## 🎯 Available Scripts
-
-- `npm run dev` - Start development server with Turbopack
-- `npm run build` - Build for production
-- `npm run start` - Start production server
-- `npm run lint` - Run ESLint
-- `npm run type-check` - Run TypeScript type checking
-
-## 📱 Features Overview
-
-### Landing Page Sections
-
-- **Hero Section**: Compelling headline with call-to-action
-- **Problem Section**: Addressing farming challenges in Zimbabwe
-- **Solution Section**: How Talazo solves these problems
-- **Benefits Section**: Key advantages of using Talazo
-- **How It Works**: Step-by-step process explanation
-- **Pricing**: Service tiers and pricing information
-- **Testimonials**: Social proof from satisfied farmers
-- **Contact**: Contact information and location
-
-### Farmer Registration
-
-- Comprehensive registration form with validation
-- Zimbabwe-specific phone number validation
-- Crop type selection with local varieties
-- Farm size and location tracking
-- Experience level assessment
-- Language preference (English, Shona, Ndebele)
-
-### Technical Features
-
-- **Responsive Design**: Works perfectly on all devices
-- **Form Validation**: Client and server-side validation
-- **Error Handling**: Comprehensive error handling
-- **Loading States**: User-friendly loading indicators
-- **Accessibility**: WCAG 2.1 compliant
-- **SEO Optimization**: Meta tags, structured data
-
-## 🎨 Customization
-
-### Colors
-
-The project uses a green-based color scheme representing agriculture:
-
-- Primary: `green-600` (#16a34a)
-- Secondary: `blue-600` (#2563eb)
-- Success: `green-500` (#22c55e)
-- Error: `red-500` (#ef4444)
-
-### Typography
-
-- System font stack for optimal performance
-- Responsive typography with proper scaling
-- Clear hierarchy with semantic HTML
-
-### Configuration
-
-Edit `src/lib/constants.ts` to customize:
-
-- Company information
-- Contact details
-- Service pricing
-- Available crop types
-- Feature highlights
-
-## 📊 Database Schema
-
-The application uses PostgreSQL with the following main tables:
-
-- **farmers**: Stores farmer registration data
-- **contact_messages**: Stores contact form submissions
-
-See `database/schema.sql` for complete schema with constraints and indexes.
-
-## 🚀 Deployment
-
-### Vercel (Recommended)
-
-1. Push your code to a Git repository
-2. Import your project to Vercel
-3. Add environment variables in Vercel dashboard
-4. Deploy automatically
-
-### Environment Variables for Production
-
-```env
-NEXT_PUBLIC_SUPABASE_URL=your_production_supabase_url
-NEXT_PUBLIC_SUPABASE_ANON_KEY=your_production_anon_key
-NEXT_PUBLIC_SITE_URL=https://yourdomain.com
-CONTACT_EMAIL=info@talazo.co.zw
+```sh
+npm run check
+npm run build
+npm run preview
 ```
 
-## 🤝 Contributing
+Vercel deployment output is generated in `.vercel/output/`. See [DEPLOYMENT.md](DEPLOYMENT.md) for replacing the existing website using the same repository, Vercel project, and domain.
 
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add some amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
+## Pages
 
-## 📄 License
+- `/` — homepage and links into the site
+- `/our-approach` — farmer-first monitoring approach
+- `/how-it-works` — monitoring steps and frequently asked questions
+- `/our-purpose` — mission and sustainability objectives
+- `/about` — organisation, values, and Team section (`#team`)
+- `/join-pilot` — direct email, call, and WhatsApp contact options
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+Navigation and footer are shared through the root layout. A sticky header contains the primary navigation, with a menu toggle on narrow screens. The header uses a trimmed version of the supplied logo to remove transparent padding. The Team section uses supplied portraits of Jeffrey-Takunda Murungweni (Product Development Lead) and Alexandra Mwondoka (Operations).
 
-## 📞 Support
+## Editorial imagery
 
-For support, email info@talazo.co.zw or create an issue in the repository.
+Locally hosted Unsplash photographs support the visual themes of crop care, soil, and harvests. These represent agricultural themes, not Talazo installations or verified sustainability outcomes. Source image IDs:
 
-## 🔗 Links
+- Landscape: `photo-1500382017468-9049fed747ef`
+- Harvest / produce: `photo-1464226184884-fa280b87c399`
+- Soil / tools: `photo-1416879595882-3373a0480b5b`
+- Maize: `photo-1625246333195-78d9c38ad449`
 
-- [Live Demo](https://talazo.co.zw)
-- [Supabase Documentation](https://supabase.com/docs)
-- [Next.js Documentation](https://nextjs.org/docs)
-- [Tailwind CSS Documentation](https://tailwindcss.com/docs)
+Original URLs use `https://images.unsplash.com/<image-id>`. Team portraits were supplied in the project root and copied into `static/images/`.
+
+## Before public launch
+
+- Pilot enquiries currently use `mailto:jeffmuruh@gmail.com`, `tel:+263786303048`, and `https://wa.me/263786303048`. The website does not collect or store form submissions.
+- If adding a contact form later, connect a real submission backend and establish a privacy notice, retention rules, and enquiry owner.
+- Confirm that product descriptions match the equipment and planned pilot.
+- Replace representative landscape photography with permission-cleared African farm photography when available. The current Unsplash image is illustrative, not a Talazo installation.
+
+## Design direction
+
+Talazo's supplied logo anchors a forest-green, cream, leaf-green, and sunrise-yellow palette. The homepage follows a farmer's journey from understanding the proposition to exploring the monitoring approach and expressing pilot interest. No measured impact, testimonials, existing deployments, or live product readings are claimed.
+
+References reviewed: https://www.greenpeace.org.uk/, https://www.fauna-flora.org/, https://bevisioneers.world/. Their content and brand assets are not reproduced.
+
+Photo: https://unsplash.com/photos/green-grass-field-near-trees-under-white-clouds-nesUgwNX3u4 (image delivered via images.unsplash.com/photo-1500382017468-9049fed747ef).
