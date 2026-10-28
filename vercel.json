@@ -1,0 +1,12 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": "sveltekit",
+  "installCommand": "npm ci",
+  "buildCommand": "npm run build",
+  "redirects": [
+    { "source": "/contact", "destination": "/join-pilot", "permanent": true },
+    { "source": "/booking", "destination": "/join-pilot", "permanent": true },
+    { "source": "/services", "destination": "/our-approach", "permanent": true },
+    { "source": "/demo", "destination": "/how-it-works", "permanent": true }
+  ]
+}
