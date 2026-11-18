@@ -10,7 +10,8 @@
     { href: '/our-approach', label: 'Our approach' },
     { href: '/how-it-works', label: 'How it works' },
     { href: '/our-purpose', label: 'Our purpose' },
-    { href: '/about', label: 'About us' }
+    { href: '/about', label: 'About us' },
+    { href: 'https://app.talazoagritech.com', label: 'Log in' }
   ];
 </script>
 <svelte:head><meta name="theme-color" content="#073e32" /></svelte:head>
